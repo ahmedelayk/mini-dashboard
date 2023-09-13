@@ -1,0 +1,14 @@
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4.5rem;
+    height: 100vh;
+    background-color: var(--main-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px 10px;
+    z-index: 2;
+}

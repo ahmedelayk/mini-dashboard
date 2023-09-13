@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    // Colors
+    --main-color : #FF7F5C; // orange
+    --bg-main-color : #F9F5F3; // background
+    --bg-second-color : #F4DBD4; // background for cards
+    --main-fonts-color : #3D5161; // main fonts
+    --second-fonts-color : #00CBC0; // second fonts
+    --text-font-family: 'Montserrat', sans-serif;
+    --number-font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: 'Montserrat', sans-serif;
+    font-family: var(--text-font-family);
+    background-color: var(--bg-main-color);
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.bg-second-color {
+    background-color: var(--bg-second-color);
+}
+
+
+.dark-color {
+    color: var(--main-fonts-color);
+}
+
+.second-color {
+    color: var(--main-color);
+}
+
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
