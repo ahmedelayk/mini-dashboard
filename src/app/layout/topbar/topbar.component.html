@@ -1,12 +1,94 @@
 <div class="topbar fixed-top bg-white">
-    <div class="d-flex justify-content-around align-items-center w-100 h-100">
-        <div class="d-flex justify-content-around align-items-center gap-1">
-            <div class="dot">
+    <div class="d-flex justify-content-around align-items-center w-100 h-100 dark-color">
+
+        <div class="d-flex justify-content-around align-items-center gap-3">
+            <div class="dot align-self-end"></div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="39.559" height="32.435" viewBox="0 0 39.559 32.435">
+                    <defs>
+                        <style>
+                            .gas {
+                                fill: #3d5161;
+                                stroke: #3d5161;
+                                stroke-width: 0.6px;
+                            }
+                        </style>
+                    </defs>
+                    <g transform="translate(0.3 -3.717)">
+                        <g transform="translate(0 4.017)">
+                            <path class="gas"
+                                d="M35.734,34.553V20.909a.65.65,0,0,0-.65-.65h-6.5a.65.65,0,0,0-.65.65V34.553h-1.3V9.864h8.446a.65.65,0,0,0,.65-.65V4.667a.65.65,0,0,0-.65-.65H.65a.65.65,0,0,0-.65.65V9.215a.65.65,0,0,0,.65.65H3.9V34.553H.65v1.3H38.959v-1.3Zm-6.5-12.994h5.2v4.548h-5.2ZM1.3,8.565V5.316H34.434V8.565H1.3Zm3.9,1.3H25.338V34.553H22.09v-.926a3.234,3.234,0,0,0,.94-5.315l1.231-.616-.581-1.162-.94.47v-.9a2.6,2.6,0,0,0-2.6-2.6H10.4a2.6,2.6,0,0,0-2.6,2.6V27l-.94-.47L6.275,27.7l1.231.616a3.233,3.233,0,0,0,.939,5.315v.926H5.2ZM9.1,27.406v-1.3a1.3,1.3,0,0,1,1.305-1.3h9.734a1.3,1.3,0,0,1,1.305,1.3v1.3H9.1Zm.652,1.3H20.788a1.949,1.949,0,1,1,0,3.9H9.747a1.949,1.949,0,1,1,0-3.9Zm0,5.2H20.79v.65H9.746V33.9Zm19.489.65V27.406h5.2v7.147Z"
+                                transform="translate(0 -4.017)" />
+                            <rect class="gas" width="1.299" height="1.949" transform="translate(9.746 25.338)" />
+                            <rect class="gas" width="1.299" height="1.949" transform="translate(19.491 25.338)" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div>
+                <h4 class="number mb-0">2/3</h4>
+            </div>
+            <div>
+                <h6 class="word mb-0">Monitored <br>Stations</h6>
             </div>
         </div>
-        <div>last update</div>
-        <div>tabs</div>
-        <div>start date</div>
-        <div>end date</div>
+
+        <div class="d-flex justify-content-around align-items-center gap-3">
+            <div class="dot align-self-end"></div>
+            <div>
+                <i class="ri-loop-right-fill icon"></i>
+            </div>
+            <div>
+                <h4 class="number mb-0">20s</h4>
+            </div>
+            <div>
+                <h6 class="word mb-0">Last <br>Update</h6>
+            </div>
+        </div>
+
+        <div>
+            <ul class="nav nav-pills d-flex justify-content-center gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="setActiveTab('today')" [ngClass]="{ active: activeTab == 'today' }">
+                        Today
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="setActiveTab('yesterday')"
+                        [ngClass]="{ active: activeTab == 'yesterday' }">
+                        Yesterday
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="setActiveTab('lastweek')"
+                        [ngClass]="{ active: activeTab == 'lastweek' }">
+                        Last Week
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+
+            <div>
+                <div class="input-group">
+                    <input class="date-input" placeholder="Start date-time" name="dp" [(ngModel)]="model" ngbDatepicker
+                        #d="ngbDatepicker" />
+                    <button class="btn btn-transparent ri-calendar-todo-fill" (click)="d.toggle()"
+                        type="button"></button>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div>
+                <div class="input-group">
+                    <input class="date-input" placeholder="End date-time" name="dp" [(ngModel)]="model2" ngbDatepicker
+                        #d2="ngbDatepicker" />
+                    <button class="btn btn-transparent ri-calendar-todo-fill" (click)="d2.toggle()"
+                        type="button"></button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

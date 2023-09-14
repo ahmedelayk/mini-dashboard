@@ -1,7 +1,60 @@
 
 .topbar {
-    height: 4.5rem;
+    height: 124px;
     width: 100vw;
     z-index: 1;
-    padding-left: 4rem;
+    padding-left: 115px;
+}
+
+.date-input {
+    border: none;
+    border-bottom: 2px solid #000
+}
+
+.date-input:focus-visible {
+    outline: none;
+}
+
+.btn-transparent {
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+}
+
+.nav {
+    background-color: var(--bg-main-color);
+    border-radius: 100px;
+    transition: .3s;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+  }
+
+  .nav-link {
+    color: var(--main-fonts-color);
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+  }
+  
+  .nav-link.active {
+    background-color: var(--main-color);
+    font-weight: bold;
+}
+  
+.number {
+  font-family: var(--roboto-font);
+  font-size: 2rem;
+}
+
+.word {
+  font-family: var(--roboto-font);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.icon {
+  font-size: 1.7rem;
 }
