@@ -26,17 +26,20 @@ body {
     color: var(--main-color);
 }
 
+.bg-main-color {
+    background-color: var(--bg-main-color);
+}
+
 .bg-second-color {
     background-color: var(--bg-second-color);
 }
-
 
 .dark-color {
     color: var(--main-fonts-color);
 }
 
 .second-color {
-    color: var(--main-color);
+    color: var(--second-fonts-color);
 }
 
 

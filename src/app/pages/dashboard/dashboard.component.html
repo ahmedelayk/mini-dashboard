@@ -1,78 +1,77 @@
-<div class="row w-100 h-100">
-    <!-- left side -->
-    <div class="col-md-9 bg-danger">
-        <!-- row cards -->
-        <div class="row">
-            <div class="d-flex justify-content-around align-items-center gap-2">
-                <div class="card">
-                    <div class="d-flex gap-1">
-                        <h3>71,028</h3>
-                        <h6>EGP</h6>
-                    </div>
-                    <h5>Total Value</h5>
-                    <h5 class="main-color">> 2 %</h5>
-                </div>
-                <div class="card">
-                    <div class="d-flex gap-1">
-                        <h3>71,028</h3>
-                        <h6>EGP</h6>
-                    </div>
-                    <h5>Total Value</h5>
-                    <h5 class="main-color">> 2 %</h5>
-                </div>
-                <div class="card">
-                    <div class="d-flex gap-1">
-                        <h3>71,028</h3>
-                        <h6>EGP</h6>
-                    </div>
-                    <h5>Total Value</h5>
-                    <h5 class="main-color">> 2 %</h5>
-                </div>
-                <div class="card">
-                    <div class="d-flex gap-1">
-                        <h3>71,028</h3>
-                        <h6>EGP</h6>
-                    </div>
-                    <h5>Total Value</h5>
-                    <h5 class="main-color">> 2 %</h5>
-                </div>
-            </div>
-        </div>
-        <!-- row tabs -->
-        <div class="row">
-            <div class="d-flex justify-content-end align-items-center">
-                <div>Graph</div>
-                <div>List</div>
-            </div>
-        </div>
-        <!-- row graph or list -->
-        <div class="row">
-            
-        </div>
-    </div>
+<div class="container-fluid px-5 bg-main-color">
+    <div class="row">
+        <!-- left side -->
+        <div class="col-md-9">
 
-    <!-- right side -->
-    <div class="col-md-3 bg-success">
-        <div class="row">
-            <div class="d-flex flex-column justify-content-between align-items-center">
-                <h5>Hourly Sales</h5>
-                <img src="" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between align-items-center">
-                <h5>Sales By Station</h5>
-                <div>
-                    station Name 92.314 m<sup>3</sup>
-                </div>
-                <div>
-                    station Name 92.314 m<sup>3</sup>
-                </div>
-                <div>
-                    station Name 92.314 m<sup>3</sup>
-                </div>
-                <div>
-                    station Name 92.314 m<sup>3</sup>
+            <!-- row cards -->
+            <div class="row my-5">
+                <div class="d-flex justify-content-around align-items-center gap-5">
+                    <div class="cardd dark-color" [ngClass]="i == 0? 'bg-second-color': 'bg-white'" *ngFor="let item of cardList; let i = index">
+                        <div class="d-flex align-items-center gap-1 roboto-font">
+                            <h3 class="card-number">{{item.number}}</h3>
+                            <h6 class="fs-22px">{{item.measure}}<sup *ngIf="item.power">{{item.power}}</sup></h6>
+                        </div>
+                        <h5 class="fw-bold mb-0">{{item.title}}</h5>
+                        <div class="d-flex align-items-center" [ngClass]="i%2==0? 'main-color': 'second-color'">
+                            <i class="ri-arrow-down-s-fill fs-1 me-1" *ngIf="i%2==0"></i>
+                            <i class="ri-arrow-up-s-fill fs-1 me-1" *ngIf="i%2!=0"></i>
+                            <span class="roboto-font">{{item.percentage}}<sup *ngIf="item.power">{{item.power}}</sup></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <!-- row tabs -->
+            <div class="row my-5">
+                <div class="d-flex justify-content-end align-items-center">
+                    <div>
+                        <ul class="nav nav-pills d-flex justify-content-center gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="setActiveTab('graph')" [ngClass]="{ active: activeTab == 'graph' }">
+                                    <i class="ri-numbers-fill fs-4 me-1"></i> graph
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" (click)="setActiveTab('list')"
+                                    [ngClass]="{ active: activeTab == 'list' }">
+                                    <i class="ri-list-check-3 fs-4 me-1"></i> list
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row graph or list -->
+            <div class="row">
+
+            </div>
+        </div> <!-- end left side -->
+
+        <!-- right side -->
+        <div class="col-md-3 bg-success">
+            <div class="row">
+                <div class="d-flex flex-column justify-content-between align-items-center">
+                    <h5>Hourly Sales</h5>
+                    <img src="" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-between align-items-center">
+                    <h5>Sales By Station</h5>
+                    <div>
+                        station Name 92.314 m<sup>3</sup>
+                    </div>
+                    <div>
+                        station Name 92.314 m<sup>3</sup>
+                    </div>
+                    <div>
+                        station Name 92.314 m<sup>3</sup>
+                    </div>
+                    <div>
+                        station Name 92.314 m<sup>3</sup>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end right side -->
+
     </div>
 </div>
