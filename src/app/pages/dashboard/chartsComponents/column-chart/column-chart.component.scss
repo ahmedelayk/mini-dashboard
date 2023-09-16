@@ -1,5 +1,32 @@
-// #chart {
-//   max-width: 650px;
-//   margin: 35px auto;
-// }
-  
+.nav {
+    transition: .3s;
+}
+
+.nav-item {
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-link {
+    color: var(--main-fonts-color);
+    border-radius: 0;
+}
+
+.nav-link.active {
+    background-color: transparent;
+    color: var(--main-color);
+    // border-bottom: 4px solid var(--main-color);
+}
+
+.nav-link.active::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}

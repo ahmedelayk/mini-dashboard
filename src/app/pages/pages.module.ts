@@ -9,12 +9,14 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ColumnChartComponent } from './dashboard/chartsComponents/column-chart/column-chart.component';
 import { ListComponent } from './dashboard/chartsComponents/list/list.component';
+import { RadarChartComponent } from './dashboard/chartsComponents/radar-chart/radar-chart.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ColumnChartComponent,
-    ListComponent
+    ListComponent,
+    RadarChartComponent
   ],
   imports: [
     CommonModule,

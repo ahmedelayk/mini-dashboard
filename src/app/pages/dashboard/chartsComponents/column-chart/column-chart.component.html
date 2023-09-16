@@ -1,4 +1,42 @@
-<div id="chart">
+<div class="bg-white p-4 rounded">
+  <div class="d-flex justify-content-between align-items-center dark-color">
+    <h4 class="fs-12 fw-bold mb-0 text-uppercase">STATIONS ACTIVATES OVERVIEW</h4>
+    <div class="d-flex align-items-center gap-3">
+      <!-- <h4 class="fs-14 fw-bold mb-0 text-uppercase">Sales</h4>
+      <h4 class="fs-14 fw-bold mb-0 text-uppercase">TRANSACTION</h4>
+      <h4 class="fs-14 fw-bold mb-0 text-uppercase">Value</h4>
+      <h4 class="fs-14 fw-bold mb-0 text-uppercase">COMPRESSION</h4> -->
+
+
+      <ul class="nav nav-pills d-flex justify-content-center gap-2">
+        <li class="nav-item">
+            <h4 class="nav-link fs-14 mb-0" (click)="setActiveTab('sales')" [ngClass]="{ active: activeTab == 'sales' }">
+                Sales
+            </h4>
+        </li>
+        <li class="nav-item">
+            <h4 class="nav-link fs-14 mb-0" (click)="setActiveTab('transaction')" [ngClass]="{ active: activeTab == 'transaction' }">
+                Transaction
+            </h4>
+        </li>
+        <li class="nav-item">
+            <h4 class="nav-link fs-14 mb-0" (click)="setActiveTab('value')" [ngClass]="{ active: activeTab == 'value' }">
+                Value
+            </h4>
+        </li>
+        <li class="nav-item">
+            <h4 class="nav-link fs-14 mb-0" (click)="setActiveTab('compression')"
+                [ngClass]="{ active: activeTab == 'compression' }">
+                Compression
+            </h4>
+        </li>
+    </ul>
+
+
+    </div>
+  </div>
+  <hr class="my-2">
+  <div id="chart">
     <apx-chart
       [series]="chartOptions.series!"
       [chart]="chartOptions.chart!"
@@ -11,3 +49,4 @@
       [grid]="chartOptions.grid!"
       ></apx-chart>
   </div>
+</div>

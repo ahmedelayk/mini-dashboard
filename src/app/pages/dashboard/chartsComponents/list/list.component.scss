@@ -1,3 +1,26 @@
+.card-container {
+    height: 350px;
+    overflow-y: auto;
+}
+
+// Start Scrollbar
+.card-container::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.card-container::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F4DBD4;
+    border-radius: 10px;
+}
+ 
+.card-container::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+//   outline: 1px solid blue;
+}
+// End Scrollbar
+
+
 .cardd {
     border-radius: 20px;
 }
@@ -5,6 +28,8 @@
 .dropdown-menu {
     left: -387px  !important;
     width: 427px;
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
 }
 
 .dropdown-toggle::after {
@@ -21,6 +46,7 @@ input[type="checkbox"] {
     border-radius: 5px;
     border: 2px solid var(--main-color);
     position: relative;
+    margin-top: 0;
 }
 
 .form-check-input:focus {

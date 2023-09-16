@@ -67,22 +67,19 @@
                 </li>
             </ul>
         </div>
-
         <div>
-
-            <div>
-                <div class="input-group">
+            <div class="position-relative">
+                <div class="input-group date-from">
                     <input class="date-input" placeholder="Start date-time" name="dp" [(ngModel)]="model" ngbDatepicker
                         #d="ngbDatepicker" />
                     <button class="btn btn-transparent ri-calendar-todo-fill" (click)="d.toggle()"
                         type="button"></button>
                 </div>
             </div>
-
         </div>
         <div>
-            <div>
-                <div class="input-group">
+            <div class="position-relative">
+                <div class="input-group date-to">
                     <input class="date-input" placeholder="End date-time" name="dp" [(ngModel)]="model2" ngbDatepicker
                         #d2="ngbDatepicker" />
                     <button class="btn btn-transparent ri-calendar-todo-fill" (click)="d2.toggle()"
@@ -90,6 +87,5 @@
                 </div>
             </div>
         </div>
-        
     </div>
 </div>

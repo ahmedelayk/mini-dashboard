@@ -9,6 +9,7 @@ import {
   ApexLegend,
   ApexGrid
 } from "ng-apexcharts";
+import { graphTab } from "src/app/enums/graphTab";
 
 type ApexXAxis = {
   type?: "category" | "datetime" | "numeric";
@@ -51,8 +52,11 @@ export class ColumnChartComponent {
         }
       ],
       chart: {
-        height: 300,
+        height: 290,
         type: "bar",
+        toolbar: {
+          show: false
+        },
         events: {
           click: function(chart, w, e) {
             // console.log(chart, w, e)
@@ -103,5 +107,10 @@ export class ColumnChartComponent {
         }
       }
     };
+  }
+
+  activeTab: string = graphTab.sales;
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
   }
 }

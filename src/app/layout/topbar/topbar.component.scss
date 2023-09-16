@@ -58,3 +58,23 @@
 .icon {
   font-size: 1.7rem;
 }
+
+.date-from::before, .date-to::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-style: solid;
+}
+
+.date-from::before {
+  left: -23px;
+  border-width: 11px;
+  border-color: transparent transparent transparent var(--main-color);
+}
+
+.date-to::before {
+  left: -27px;
+  border-width: 9px;
+  border-color:var(--main-color);
+}
