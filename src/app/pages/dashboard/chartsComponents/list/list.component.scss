@@ -1,0 +1,45 @@
+.cardd {
+    border-radius: 20px;
+}
+
+.dropdown-menu {
+    left: -387px  !important;
+    width: 427px;
+}
+
+.dropdown-toggle::after {
+    content: none
+}
+
+.dropdown-divider {
+    margin: 3px !important;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    position: relative;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    border: none;
+    background-color: var(--main-color);
+}
+
+.form-check-input:checked::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    // background-color: var(--main-color);
+}

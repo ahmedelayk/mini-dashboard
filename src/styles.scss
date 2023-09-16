@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:opsz,wght@6..12,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
@@ -10,9 +9,12 @@
     --bg-second-color : #F4DBD4; // background for cards
     --main-fonts-color : #3D5161; // main fonts
     --second-fonts-color : #00CBC0; // second fonts
+    --third-fonts-color: #B9CDE2;
     --mont-font: 'Montserrat', sans-serif;
     --roboto-font: 'Roboto', sans-serif;
+    --nunito-font: 'Nunito Sans', sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
     background-color: var(--bg-main-color);
@@ -22,6 +24,21 @@ body {
     font-family: var(--mont-font);
 }
 
+// Font Classes
+.mont-font {
+    font-family: var(--mont-font);
+}
+
+.roboto-font {
+    font-family: var(--roboto-font);
+    font-weight: bold;
+}
+
+.nunito-font {
+    font-family: var(--nunito-font);
+}
+
+// Color Classes
 .main-color {
     color: var(--main-color);
 }
@@ -42,7 +59,20 @@ body {
     color: var(--second-fonts-color);
 }
 
+.third-color {
+    color: var(--third-fonts-color);
+}
 
+// font sizes
+@for $i from 9 through 28 {
+    .fs-#{$i} {
+        font-size: 1px * $i;
+    }
+}
+
+.fw-medium {
+    font-weight: 500;
+}
 
 .dot {
     width: 10px;
@@ -51,3 +81,10 @@ body {
     border-radius: 50%;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,42 +1,56 @@
 .cardd {
-    padding: 20px;
-    border-radius: 24px;
-    width: 270px;
-    height: 165px;
+  padding: 20px;
+  border-radius: 24px;
+  width: 270px;
+  height: 165px;
 
-    .card-number {
-        font-size: 40px;
-    }
-}
-
-.fs-22px {
-    font-size: 22px;
+  .card-number {
+      font-size: 40px;
+  }
 }
 
 // Start Tabs
 .nav {
-    background-color: #FFF;
-    border-radius: 100px;
-    transition: .3s;
-  }
+  background-color: #FFF;
+  border-radius: 100px;
+  transition: .3s;
+}
   
-  .nav-item {
-    cursor: pointer;
-  }
+.nav-item {
+  cursor: pointer;
+}
 
-  .nav-link {
-    color: var(--main-fonts-color);
-    text-transform: uppercase;
-    border-radius: 100px;
-    font-size: 14px;
-    padding: 3px 35px;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link.active {
-    background-color: var(--main-color);
-    font-weight: bold;
+.nav-link {
+  color: var(--main-fonts-color);
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-size: 14px;
+  padding: 3px 35px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  background-color: var(--main-color);
+  font-weight: normal;
 }
 // End Tabs
+
+progress {
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+}
+progress::-webkit-progress-bar {
+  border-radius: 20px;
+  background-color: #F4DBD4;
+}
+progress::-webkit-progress-value {
+  border-radius: 20px;
+  background-color: var(--main-color);
+}
+progress.nm::-webkit-progress-value {
+  background-color: var(--third-fonts-color);
+}
